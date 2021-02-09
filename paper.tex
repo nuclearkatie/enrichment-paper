@@ -1,0 +1,139 @@
+\documentclass[review]{./elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+
+\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{booktabs} % nice rules for tables
+\usepackage{microtype} % if using PDF
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{multirow}
+\usepackage{pdflscape}
+
+\newcommand{\code}[1]{\lstinline[basicstyle=\ttfamily\color{green!40!black}]|#1|}
+\newcommand{\units}[1] {\:\text{#1}}%
+\newcommand{\SN}{S$_N$}
+\newcommand{\cyclus}{\textsc{Cyclus}\xspace}
+\newcommand{\Cyclus}{\cyclus}
+\newcommand{\citeme}{\textcolor{red}{CITE}\xspace}
+\newcommand{\TODO}[1] {{\color{red}\textbf{TODO: #1}}}%
+
+\newcommand{\comment}[1]{{\color{green}\textbf{#1}}}
+
+\usepackage[acronym]{glossaries}
+%\makeglossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{glossary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+    
+\input{authors}
+
+\date{\today}
+
+\title{Evaluating computational methods for modeling off-normal operation of gas centrifuge cascades}
+%tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+
+% 0.Abstract
+\input{abstract}
+
+%\begin{keyword}
+%\texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+%\MSC[2010] 00-01\sep  99-00
+%\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\maketitle
+
+
+% I.   Motivation
+\input{motivation}
+
+% II.  Theory
+%   a. cascade design
+%   b. misuse model
+%       i.   case A
+%       ii.  case B
+%       iii. case C
+\input{theory}
+
+% III. Experiement
+%   a.  cycle 
+%   b.  cascade per level optimisation
+\input{experiement}
+
+% IV.  results
+%   a. time step effects
+%   b. no tails recycling
+%   c. tails recycling
+\input{results}
+
+% V.  Discussion
+% VI. Conclusions and future plan
+\input{dis_clusion}
+
+
+\section{Acknowledgments}
+This work was funded by the Consortium for Verification Technology under
+Department of Energy National Nuclear Security Administration award number
+DE-NA0002534
+
+%\end{frontmatter}
+
+
+%\input{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{small}
+\bibliography{refs}  % NO SPACES BETWEEN BIB FILENAMES!
+\end{small}
+\end{document}
